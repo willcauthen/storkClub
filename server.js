@@ -14,6 +14,10 @@ app.get('/', function (request, response) {
 	response.render('index');
 });
 
+app.get('/signup', function (request, response) {
+	response.render('signup');
+});
+
 app.listen(process.env.PORT || 5000, function (request, response) {
 	console.log("The harvest is over, the summer is ended, and we are not saved");
 });
