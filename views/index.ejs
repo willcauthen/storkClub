@@ -13,9 +13,20 @@
 <body ng-controller="MainCtrl">
 	<h1>hello {{message}}</h1>
 	<input type="text" ng-model="message">
-
+	<h1>DEATH METAL</h1>
 	<ul ng-repeat="band in bands" ng-hide="band.genre != 'death metal'">
 		<li>{{band.name}} - {{band.members}} members - Genre: {{band.genre}}</li>
 	</ul>
+	<h2>OTHER SHITTE</h2>
+	<ul ng-repeat="band in bands" ng-hide="band.genre =='death metal'">
+		<li>{{band.name}} - {{band.members}} members - Genre: {{band.genre}}</li>
+	</ul>
+
+	<form ng-submit="addBand()">
+		Band name:<input type="text" ng-model="newBand.name">
+		Members:<input type="number" ng-model="newBand.members">
+		Genre:<input type="text" ng-model="newBand.genre">
+		<input type="submit">
+	</form>
 </body>
 </html>

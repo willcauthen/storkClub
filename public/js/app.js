@@ -11,4 +11,8 @@ app.controller('MainCtrl', function ($scope) {
 		{name: "The Best Ever Death Metal Band Out of Denton", members: 2, genre: "death metal"},
 		{name: "Elvis Depressedly", members: 3, genre: "depressing indie shit"}
 	];
+$scope.addBand = function() {
+	// console.log($scope.newBand);
+	$scope.bands.push($scope.newBand);
+};
 });
